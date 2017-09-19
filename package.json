@@ -1,0 +1,22 @@
+{
+  "name": "hi-fi-mantas-akilanas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wi73a-praktisk-web/hi-fi-mantas-akilanas.git"
+  },
+  "author": "mantarias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wi73a-praktisk-web/hi-fi-mantas-akilanas/issues"
+  },
+  "homepage": "https://github.com/wi73a-praktisk-web/hi-fi-mantas-akilanas#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.13"
+  }
+}

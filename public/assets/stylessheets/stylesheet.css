@@ -1,0 +1,15 @@
+.combinedSearch{
+    display:flex;
+}
+h1,h2,h3{
+    text-align: center;
+}
+.equalImage a{
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+/* img{
+    height: 200px;
+} */
