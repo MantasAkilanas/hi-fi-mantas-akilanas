@@ -17,6 +17,7 @@
                 anchor.setAttribute("href","produkter.html?produktnr="+nyesteProdukt.id);
                 const navn = document.createTextNode(nyesteProdukt.navn);
                 img.setAttribute("src","./assets/media/"+nyesteProdukt.billede)
+                
                 h3.appendChild(navn);
                 div.setAttribute("class","col-xs-12 col-sm-6 col-md-3 produktDiv")
                 anchor.appendChild(img);
@@ -29,7 +30,7 @@
              
                 
             })
-            setTimeout(function(){ equalColumns(); }, 30);
+            setTimeout(function(){ equalColumns(); }, 500);
             
         })
     }

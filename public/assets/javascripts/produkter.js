@@ -55,7 +55,6 @@
                 
                 const div = document.createElement("DIV");
                 const billedeDiv = document.createElement("DIV");
-                
                 const h3 = document.createElement("H3");
                 const img = document.createElement("img");
                 var a = document.createElement("A");
@@ -68,9 +67,8 @@
                 h3.appendChild(navn);
                 div.setAttribute("class","col-xs-12 col-sm-6 col-md-3 produktDiv")
                 anchor.appendChild(img);
-                billedeDiv.appendChild(anchor);
-                billedeDiv.setAttribute("class","equalImage");
-                div.appendChild(billedeDiv);
+                div.appendChild(anchor);
+                anchor.setAttribute("class","equalImage");
                 a.appendChild(h3);
                 div.appendChild(a);
                 myDiv.appendChild(div);
