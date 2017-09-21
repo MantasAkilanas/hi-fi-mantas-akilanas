@@ -33,10 +33,10 @@
                     <li><a href="produkter.html">Produkter</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
-                <form class="navbar-form navbar-left">
+                <form class="navbar-form navbar-left" id="form">
                     <div class="form-group combinedSearch">
-                        <input type="text" class="form-control" placeholder="Search">´
-                        <button type="submit" class="btn btn-default"><span class="glyphicon  glyphicon-search"></span>
+                        <input type="text" class="form-control" id="searchValue" placeholder="Search">
+                        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon  glyphicon-search"></span>
                         </button>
                     </div>
 
@@ -61,30 +61,31 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <script src="./assets/javascripts/forside.js"></script>
+    <script src="./assets/javascripts/search.js"></script>
     <script>
-            var equalColumns = function () {
-                var columns = document.getElementsByClassName("equalImage");
+        var equalColumns = function () {
+            var columns = document.getElementsByClassName("equalImage");
 
-                var lenght = columns.length;
-                var height = 0;
+            var lenght = columns.length;
+            var height = 0;
 
-                for (var i = 0; i < lenght; i++) {
-                    columns[i].style.height = "auto";
-                }
-                for (var i = 0; i < lenght; i++) {
-                    if (columns[i].clientHeight > height) {
-                        height = columns[i].clientHeight;
+            for (var i = 0; i < lenght; i++) {
+                columns[i].style.height = "auto";
+            }
+            for (var i = 0; i < lenght; i++) {
+                if (columns[i].clientHeight > height) {
+                    height = columns[i].clientHeight;
 
-                    }
-                }
-                for (var i = 0; i < lenght; i++) {
-                    columns[i].style.lineHeight = height + "px";
-                    columns[i].style.height = height + "px";
                 }
             }
+            for (var i = 0; i < lenght; i++) {
+                columns[i].style.lineHeight = height + "px";
+                columns[i].style.height = height + "px";
+            }
+        }
 
-            equalColumns();
-            window.addEventListener("resize", equalColumns, true);
+        equalColumns();
+        window.addEventListener("resize", equalColumns, true);
     </script>
 </body>
 
