@@ -4,8 +4,8 @@ function search() {
     window.location.assign("produkter.html?find=" + value);
 }
 
-document.getElementById("form").addEventListener("submit", function (event2) {
-    event2.preventDefault();
+document.getElementById("form").addEventListener("submit", function (event) {
+    event.preventDefault();
     search();
 });
 

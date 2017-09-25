@@ -131,8 +131,6 @@
             })
             .then(function (fundet) {
                 fundet.forEach(function (fund) {
-                    console.log(find);
-                    console.log(fund.navn);
                     const myDiv = document.querySelector(".myDiv");
                     if (find == fund.id || find == fund.navn || find == fund.kategori || find == fund.producent) {
 
@@ -140,18 +138,13 @@
                         const p = document.createElement("P");
                         const pText = document.createTextNode(fund.navn);
                         const a = document.createElement("A");
+                        a.setAttribute("href","produkter.html?produktnr=" +fund.id);
                         p.appendChild(pText);
                         a.appendChild(p);
                         myDiv.appendChild(a);
 
 
 
-                    }
-                    else{
-                        const h2 = document.createElement("H2");
-                        const h2text = document.createTextNode("Kun ikke finde noget under: " + find);
-                        h2.appendChild(h2text);
-                        myDiv.appendChild(h2);
                     }
                 })
             });
