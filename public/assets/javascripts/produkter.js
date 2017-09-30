@@ -140,6 +140,7 @@
                     p.appendChild(pText);
                     a.appendChild(p);
                     myDiv.appendChild(a);
+                    
                 })
             });
     }
