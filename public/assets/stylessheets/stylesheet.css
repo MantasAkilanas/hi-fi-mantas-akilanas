@@ -4,6 +4,9 @@
 h1,h2,h3{
     text-align: center;
 }
+h3{
+    font-size:16px;
+}
 .equalImage{
     display: block;
     text-align: center;
@@ -21,7 +24,13 @@ img{
 input{
     text-align: center;
 }
+main{
+    margin-bottom: 50px;
+}
 footer{
     background-color: #e7e7e7;
     padding:15px;
+    /* position:fixed;
+    bottom:0px;
+    width:100%; */
 }
