@@ -21,20 +21,31 @@
                 const h2Text = document.createTextNode("Alle kategorier");
                 h2.appendChild(h2Text);
                 myDiv.appendChild(h2);
+                firsttime = "";
                 kategorier.forEach(function (kategori) {
-                    const div = document.createElement("DIV");
-                    const h3 = document.createElement("H3");
-                    var a = document.createElement("A");
-                    a.setAttribute("href", "produkter.html?kategori=" + kategori.id);
-                    const navn = document.createTextNode(kategori.kategori);
-                    h3.appendChild(navn);
-                    div.setAttribute("class", "col-xs-6 col-sm-4 col-md-3 produktDiv");
-                    a.appendChild(h3);
-                    div.appendChild(a);
-                    myDiv.appendChild(div);
+
+
+                    if (firsttime != kategori.kategori) {
+                        const div = document.createElement("DIV");
+                        const h3 = document.createElement("H3");
+                        var a = document.createElement("A");
+                        const img = document.createElement("IMG");
+                        img.setAttribute("src", "./assets/media/" + kategori.billede)
+                        a.setAttribute("href", "produkter.html?kategori=" + kategori.id);
+                        const navn = document.createTextNode(kategori.kategori);
+                        h3.appendChild(navn);
+                        div.setAttribute("class", "col-xs-6 col-sm-4 col-md-3 produktDiv");
+                        a.appendChild(h3);
+                        a.appendChild(img);
+                        a.setAttribute("class", "equalImage");
+                        div.appendChild(a);
+                        myDiv.appendChild(div);
+                        firsttime = kategori.kategori;
+                    }
 
 
                 })
+                setTimeout(function () { equalColumns(); }, 30);
 
             });
     }
@@ -132,16 +143,38 @@
             })
             .then(function (fundet) {
                 fundet.forEach(function (fund) {
+                    // const myDiv = document.querySelector(".myDiv");
+                    // const p = document.createElement("P");
+                    // const pText = document.createTextNode(fund.navn);
+                    // const a = document.createElement("A");
+                    // a.setAttribute("href", "produkter.html?produktnr=" + fund.id);
+                    // p.appendChild(pText);
+                    // a.appendChild(p);
+                    // myDiv.appendChild(a);
                     const myDiv = document.querySelector(".myDiv");
-                    const p = document.createElement("P");
-                    const pText = document.createTextNode(fund.navn);
-                    const a = document.createElement("A");
+                    const div = document.createElement("DIV");
+                    const billedeDiv = document.createElement("DIV");
+                    const h3 = document.createElement("H3");
+                    const img = document.createElement("img");
+                    var a = document.createElement("A");
+                    var anchor = document.createElement("A");
+
                     a.setAttribute("href", "produkter.html?produktnr=" + fund.id);
-                    p.appendChild(pText);
-                    a.appendChild(p);
-                    myDiv.appendChild(a);
-                    
+                    anchor.setAttribute("href", "produkter.html?produktnr=" + fund.id);
+                    const navn = document.createTextNode(fund.navn);
+                    img.setAttribute("src", `./assets/media/${fund.billede}`);
+                    h3.appendChild(navn);
+                    div.setAttribute("class", "col-xs-12 col-sm-6 col-md-3 produktDiv");
+                    anchor.appendChild(img);
+                    div.appendChild(anchor);
+                    anchor.setAttribute("class", "equalImage");
+                    a.appendChild(h3);
+                    div.appendChild(a);
+                    myDiv.appendChild(div);
                 })
+                setTimeout(function () { equalColumns(); }, 30);
+
+
             });
     }
     document.addEventListener("DOMContentLoaded", function () {

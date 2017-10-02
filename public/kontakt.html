@@ -36,7 +36,7 @@
                 <form class="navbar-form navbar-left" id="form">
                     <div class="form-group combinedSearch">
                         <input type="text" class="form-control" id="searchValue" placeholder="Search">
-                        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon  glyphicon-search"></span>
+                        <button type="submit" class="btn btn-default"><span class="glyphicon  glyphicon-search"></span>
                         </button>
                     </div>
 
@@ -51,15 +51,52 @@
         <!-- /.container-fluid -->
     </nav>
     <main>
-        <div class="container">
+        <!-- <div class="container">
             <div class="col-xs-10 col-xs-offset-1 formular">
                 <input type="text" id="navn" placeholder="navn">
                 <input type="tel" id="mobil" placeholder="mobil">
                 <input type="email" id="email" placeholder="email">
+                <textarea id="text" placeholder="skriv din besked her"></textarea>
                 <button id="save">submit</button>
             </div>
             <div class="myDiv col-xs-10 col-xs-offset-1"></div>
-        </div>
+        </div> -->
+        <section id="contact">
+            <div class="section-content">
+                <h1 class="section-header">Get in <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> Touch with us</span></h1>
+            </div>
+            <div class="contact-section">
+                <div class="container">
+                    <div class="overlay"></div>
+                    <div class="col-md-6 form-line">
+                        <div class="form-group">
+                            <label for="exampleInputUsername">Your name</label>
+                            <input type="text" class="form-control" id="navn" placeholder=" Enter Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder=" Enter Email id">
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Mobile No.</label>
+                            <input type="tel" class="form-control" id="mobil" placeholder=" Enter 8-digit mobile no.">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="description"> Message</label>
+                            <textarea class="form-control" id="besked" placeholder="Enter Your Message"></textarea>
+                        </div>
+                        <div>
+
+                            <button type="button" id="save" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
+                        </div>
+
+                    </div>
+                </div>
+                
+        </section>
+        
     </main>
     <footer>
         <h4>kontakt info</h4>

@@ -21,8 +21,9 @@ img{
     flex-direction: column;
     
 }
-input{
+input, textarea{
     text-align: center;
+    resize:none;
 }
 main{
     margin-bottom: 50px;
@@ -33,4 +34,21 @@ footer{
     /* position:fixed;
     bottom:0px;
     width:100%; */
+}
+#contact{
+    position: relative;
+}
+.overlay{
+    position:absolute;
+    z-index: 200;
+    top:200px;
+    background-color: grey;
+    width:500px;
+    margin-left: 20%;
+    height:150px;
+    color:green;
+    display:none;
+}
+.overlay h2{
+    font-size: 75px;
 }
