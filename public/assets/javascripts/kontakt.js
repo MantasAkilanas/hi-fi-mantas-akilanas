@@ -7,7 +7,6 @@ document.getElementById("save").addEventListener('click', (event) => {
     var checker = true;
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    checker = true;
     let init = {
         method: 'POST',
         headers: headers,
@@ -47,22 +46,15 @@ document.getElementById("save").addEventListener('click', (event) => {
     if (checker) {
         let request = new Request('http://localhost:1337/createKontakt', init);
         fetch(request)
-        fetch("http://localhost:1337/kontakt")
             .then(function (result) {
                 return result.json();
             })
             .then(function (succes) {
-                var successed = false;
                 const overlay = document.querySelector(".overlay");
                 const h2 = document.createElement("H2");
                 const h2text = document.createTextNode("succes");
                 h2.appendChild(h2text);
-                succes.forEach(function (succed) {
-                    if (navn == succed.navn && mobil == succed.mobil && email == succed.email) {
-                        successed = true;
-                    }
-                })
-                if (successed) {
+                if (succes.message == "Data indsat") {
                     overlay.innerHTML = "";
                     overlay.appendChild(h2);
                     document.querySelector(".overlay").style.display = "block";

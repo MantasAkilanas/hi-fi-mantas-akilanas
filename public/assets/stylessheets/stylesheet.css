@@ -45,10 +45,9 @@ footer{
     background-color: grey;
     width:500px;
     margin-left: 20%;
-    height:150px;
     color:green;
     display:none;
 }
 .overlay h2{
-    font-size: 75px;
+    font-size: 30px;
 }

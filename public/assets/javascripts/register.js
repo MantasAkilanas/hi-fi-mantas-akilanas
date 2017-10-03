@@ -43,7 +43,31 @@ document.getElementById("save").addEventListener('click', (event) => {
         let request = new Request('http://localhost:1337/createAccount', init);
         fetch(request)
         .then(function (answer){
-            console.log(answer);
+            return answer.json()
+        })
+        .then(function (stuff){
+            const overlay = document.querySelector(".overlay");
+            const h2 = document.createElement("H2");
+            if (stuff.message == "Data indsat") {
+                const h2text = document.createTextNode("succes");
+                overlay.innerHTML = "";
+                h2.appendChild(h2text);
+                overlay.appendChild(h2);
+                document.querySelector(".overlay").style.display = "block";
+                checker = false;
+            }
+            else{
+                const h2text = document.createTextNode("brugernavn eller email optaged");
+                overlay.innerHTML = "";
+                h2.appendChild(h2text);
+                overlay.appendChild(h2);
+                document.querySelector(".overlay").style.display = "block";
+                checker = false;
+            }
+            
         })
     }
 });
+document.querySelector(".overlay").addEventListener("click", (event) => {
+    document.querySelector(".overlay").style.display = "none";
+})
