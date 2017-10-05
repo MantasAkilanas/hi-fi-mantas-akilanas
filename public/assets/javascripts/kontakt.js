@@ -52,13 +52,15 @@ document.getElementById("save").addEventListener('click', (event) => {
             .then(function (succes) {
                 const overlay = document.querySelector(".overlay");
                 const h2 = document.createElement("H2");
-                const h2text = document.createTextNode("succes");
+                const h2text = document.createTextNode(succes.message);
                 h2.appendChild(h2text);
-                if (succes.message == "Data indsat") {
-                    overlay.innerHTML = "";
-                    overlay.appendChild(h2);
-                    document.querySelector(".overlay").style.display = "block";
-                }
+                overlay.innerHTML = "";
+                overlay.appendChild(h2);
+                document.querySelector(".overlay").style.display = "block";
+                document.querySelector('#navn').value = "";
+                document.querySelector('#mobil').value = "";
+                document.querySelector('#email').value = "";
+                document.querySelector('#besked').value = "";
             })
 
     }

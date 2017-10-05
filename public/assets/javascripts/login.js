@@ -29,6 +29,7 @@ document.getElementById("save").addEventListener('click', (event) => {
                 return answer.json()
             })
             .then(function (stuff) {
+                console.log(stuff);
                 const overlay = document.querySelector(".overlay");
                 const h2 = document.createElement("H2");
                 const h2text = document.createTextNode(stuff.message);
@@ -36,8 +37,11 @@ document.getElementById("save").addEventListener('click', (event) => {
                 h2.appendChild(h2text);
                 overlay.appendChild(h2);
                 document.querySelector(".overlay").style.display = "block";
-
-
+                localStorage.setItem("token", stuff.AccessToken);
+                localStorage.setItem("userid", stuff.ID);
+            })
+            .catch((err) =>{
+                console.log(err);
             })
     }
 });
