@@ -1,6 +1,6 @@
 (() => {
     document.addEventListener('DOMContentLoaded', () => {
-        if (localStorage.getItem('token') === null) {
+        if (localStorage.getItem('token') === null || localStorage.getItem('userid') === null) {
             window.location.assign('login.html');
         } else {
             console.log(localStorage.getItem('token'));

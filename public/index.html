@@ -43,7 +43,15 @@
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="register.html">Registrer</a></li>
-                    <li><a href="login.html">Log ind</a></li>
+                    <li id="logind"><a href="login.html">Log ind</a></li>
+                    <li id="logud"><a href="#">Log ud</a></li>
+                    <li id="navDropdown" class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span> <!--<span class="caret"></span>--></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="createprodukt.html">Opret produkt</a></li>
+                        <li><a href="editprodukt.html">Redigere produkt</a></li>
+                      </ul>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -70,6 +78,7 @@
         crossorigin="anonymous"></script>
     <script src="./assets/javascripts/forside.js"></script>
     <script src="./assets/javascripts/search.js"></script>
+    <script src="./assets/javascripts/logedin.js"></script>
     <script>
         var equalColumns = function () {
             var columns = document.getElementsByClassName("equalImage");

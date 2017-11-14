@@ -1,4 +1,4 @@
-.combinedSearch{
+.combinedSearch, .flex{
     display:flex;
 }
 h1,h2,h3{
@@ -50,4 +50,28 @@ footer{
 }
 .overlay h2{
     font-size: 30px;
+}
+#logud,#navDropdown{
+    display:none;
+}
+.down{
+    display:flex;
+    flex-direction: column;
+    padding-top:30px;
+}
+.underlined{
+    margin-top: 20px;
+    border-bottom: 1px solid black;
+}
+#searchOutput{
+    text-align: center;
+}
+#searchOutput .col-xs-4,#searchOutput .col-xs-2,#searchOutput .col-xs-1{
+    height:30px;
+}
+#kategoriSearch{
+    padding-top:30px;
+}
+#createKategori{
+    width:50px;
 }

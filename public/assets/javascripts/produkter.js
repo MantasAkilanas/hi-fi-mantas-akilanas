@@ -11,7 +11,8 @@
         }
     };
     const visAlleKategorier = function () {
-        fetch("http://localhost:1337/kategorier")
+        // fetch("http://localhost:1337/kategorier")
+        fetch("http://localhost:1337/kategori")
             .then(function (result) {
                 return result.json();
             })
@@ -21,31 +22,31 @@
                 const h2Text = document.createTextNode("Alle kategorier");
                 h2.appendChild(h2Text);
                 myDiv.appendChild(h2);
-                firsttime = "";
+                // firsttime = "";
                 kategorier.forEach(function (kategori) {
 
 
-                    if (firsttime != kategori.kategori) {
+                    // if (firsttime != kategori.kategori) {
                         const div = document.createElement("DIV");
                         const h3 = document.createElement("H3");
                         var a = document.createElement("A");
-                        const img = document.createElement("IMG");
-                        img.setAttribute("src", "./assets/media/" + kategori.billede)
+                        // const img = document.createElement("IMG");
+                        // img.setAttribute("src", "./assets/media/" + kategori.billede)
                         a.setAttribute("href", "produkter.html?kategori=" + kategori.id);
-                        const navn = document.createTextNode(kategori.kategori);
+                        const navn = document.createTextNode(kategori.navn);
                         h3.appendChild(navn);
                         div.setAttribute("class", "col-xs-6 col-sm-4 col-md-3 produktDiv");
                         a.appendChild(h3);
-                        a.appendChild(img);
+                        // a.appendChild(img);
                         a.setAttribute("class", "equalImage");
                         div.appendChild(a);
                         myDiv.appendChild(div);
-                        firsttime = kategori.kategori;
-                    }
+                        // firsttime = kategori.kategori;
+                    // }
 
 
                 })
-                setTimeout(function () { equalColumns(); }, 30);
+                // setTimeout(function () { equalColumns(); }, 30);
 
             });
     }
@@ -77,7 +78,7 @@
                     a.setAttribute("href", "produkter.html?produktnr=" + kat.id);
                     anchor.setAttribute("href", "produkter.html?produktnr=" + kat.id);
                     const navn = document.createTextNode(kat.navn);
-                    img.setAttribute("src", "./assets/media/" + kat.billede);
+                    img.setAttribute("src", "http://localhost:1337/image/" + kat.billede);
                     h3.appendChild(navn);
                     div.setAttribute("class", "col-xs-12 col-sm-6 col-md-3 produktDiv");
                     anchor.appendChild(img);
@@ -109,7 +110,7 @@
                         const img = document.createElement("img");
                         h2.appendChild(h2Text);
                         myDiv.appendChild(h2);
-                        img.setAttribute("src", "./assets/media/" + prod.billede);
+                        img.setAttribute("src", "http://localhost:1337/image/" + prod.billede);
                         div.setAttribute("class", "col-xs-12 col-md-6 produktDiv");
                         div.appendChild(img);
                         myDiv.appendChild(div);
@@ -162,7 +163,7 @@
                     a.setAttribute("href", "produkter.html?produktnr=" + fund.id);
                     anchor.setAttribute("href", "produkter.html?produktnr=" + fund.id);
                     const navn = document.createTextNode(fund.navn);
-                    img.setAttribute("src", `./assets/media/${fund.billede}`);
+                    img.setAttribute("src", `http://localhost:1337/image/${fund.billede}`);
                     h3.appendChild(navn);
                     div.setAttribute("class", "col-xs-12 col-sm-6 col-md-3 produktDiv");
                     anchor.appendChild(img);
