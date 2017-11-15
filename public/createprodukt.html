@@ -18,61 +18,40 @@
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
                     aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
                 <a class="navbar-brand" href="index.html">HI-FI</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="index.html">Forside
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="produkter.html">Produkter</a>
-                    </li>
-                    <li>
-                        <a href="kontakt.html">Kontakt</a>
-                    </li>
+                    <li class="active"><a href="index.html">Forside <span class="sr-only">(current)</span></a></li>
+                    <li><a href="produkter.html">Produkter</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
                 <form class="navbar-form navbar-left" id="form">
                     <div class="form-group combinedSearch">
                         <input type="text" class="form-control" id="searchValue" placeholder="Search">
-                        <button type="submit" class="btn btn-default">
-                            <span class="glyphicon  glyphicon-search"></span>
+                        <button type="submit" class="btn btn-default"><span class="glyphicon  glyphicon-search"></span>
                         </button>
                     </div>
 
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="register.html">Registrer</a>
-                    </li>
-                    <li id="logind">
-                        <a href="login.html">Log ind</a>
-                    </li>
-                    <li id="logud">
-                        <a href="#">Log ud</a>
-                    </li>
+                    <li><a href="register.html">Registrer</a></li>
+                    <li id="logind"><a href="login.html">Log ind</a></li>
+                    <li id="logud"><a href="#">Log ud</a></li>
                     <li id="navDropdown" class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span>
-                            <!--<span class="caret"></span>-->
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="createprodukt.html">Opret produkt</a>
-                            </li>
-                            <li>
-                                <a href="editprodukt.html">Redigere produkt</a>
-                            </li>
-                        </ul>
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span> <!--<span class="caret"></span>--></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="createprodukt.html">Opret produkt</a></li>
+                        <li><a href="createproducent.html">Opret produkt</a></li>
+                        <li><a href="createkategori.html">Opret produkt</a></li>
+                      </ul>
                     </li>
                 </ul>
             </div>
@@ -83,36 +62,37 @@
     <main>
         <h2>Opret produkt</h2>
         <div class="container myDiv">
+            <form id="produktform" enctype="multipart/form-data">
+                <div class="col-xs-4 down">
+                    <label for="currentid">currentid</label>
+                    <label for="wantedid">wantedid</label>
+                    <label for="navn">navn</label>
+                    <label for="kategori">kategori</label>
+                    <label for="producent">producent</label>
+                    <label for="pris">pris</label>
+                    <label for="antal">antal</label>
+                    <label for "picture">billede</label>
+                    <button type="submit" id="createProdukt">Gem</button>
+                </div>
+                <div class="col-xs-8 down">
 
-            <div class="col-xs-4 down">
-                <label for="currentid">currentid</label>
-                <label for="wantedid">wantedid</label>
-                <label for="navn">navn</label>
-                <label for="kategori">kategori</label>
-                <label for="producent">producent</label>
-                <label for="pris">pris</label>
-                <label for="antal">antal</label>
-                <label for "picture">billede</label>
-
-            </div>
-            <div class="col-xs-8 down">
-                <form id="form" enctype="multipart/form-data">
                     <input type="text" id="id2" name="id2">
                     <input type="text" id="id" name="id">
-                    <input type="text" name="navn" id="navn">
+                    <input type="text" name="navn" id="navn" required>
                     <select name="kategori" id="kategori">
                         <option>vælg en kategori</option>
                     </select>
                     <select name="producent" id="producent">
                         <option>vælg en producent</option>
                     </select>
-                    <input type="text" name="pris" id="pris">
-                    <input type="text" name="antal" id="antal">
-                    <input type="file" id="picture" name="picture" multiple="multiple">
-                    <button type="submit" id="createProdukt">Gem</button>
-                </form>
-            </div>
+                    <input type="text" name="pris" id="pris" required>
+                    <input type="text" name="antal" id="antal" required>
+                    <input type="file" id="picture" name="picture" multiple="multiple" required>
+                    <input type="hidden" id="oldpicture" name="oldpicture">
+                    
 
+                </div>
+            </form>
             <div id="kategoriSearch" class="col-xs-10 col-xs-offset-1">
                 <input type="text" class="form-control" id="searchValue2" placeholder="Search">
             </div>

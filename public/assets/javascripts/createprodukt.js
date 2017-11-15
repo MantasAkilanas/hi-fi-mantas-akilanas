@@ -30,12 +30,13 @@
             })
     })
     kategoriSearch();
-    document.querySelector("#form").addEventListener("submit", (event) => {
+    
+    document.querySelector("#produktform").addEventListener("submit", (event) => {
+        event.preventDefault();
         alert("hej");
         // addEventListener("DOMContentLoaded", () => {
         //     document.querySelector("#form").addEventListener("submit", (event) => {
-        event.preventDefault();
-        let form = document.querySelector('#form')
+        let form = document.querySelector('#produktform')
         let data = new FormData(form);
 
         // ingen headers sendes med, browseren sætter automatisk de korrekte headers alt efter formens indhold
@@ -45,10 +46,18 @@
             cache: 'no-cache'
         };
         console.log(data)
-        // let request = new Request(`http://localhost:1337/craeteProdukt`, init);
+        let request = new Request(`http://localhost:1337/createProdukt`, init);
 
-        // fetch(request)
+        fetch(request)
+        .then((result)=>{
+            result.json();
+        })
+        .then((message)=>{
+            console.log(message.message);
+            // if(message.message == ){
 
+            // }
+        })
 
 
         // })
@@ -74,6 +83,7 @@
         //         kategoriSearch();
 
         //     })
+        
 
     })
     document.querySelector("#kategoriSearch").addEventListener("input", (event) => {
@@ -132,6 +142,7 @@
                             document.querySelector("#producent").value = element.producentid;
                             document.querySelector("#pris").value = element.pris;
                             document.querySelector("#antal").value = element.antal;
+                            document.querySelector("#oldpicture").value = element.billede;
 
                         })
                         document.querySelector(`#buttonSlet${element.id}`).addEventListener("click", () => {
