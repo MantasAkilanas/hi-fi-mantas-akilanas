@@ -146,33 +146,57 @@
 
                         })
                         document.querySelector(`#buttonSlet${element.id}`).addEventListener("click", () => {
-                            let headers = new Headers();
-                            headers.append('Content-Type', 'application/json');
-                            let init = {
-                                method: 'PUT',
-                                headers: headers,
-                                body: `{"navn":"${element.navn}","id":"${element.id}"}`,
-                                cache: 'no-cache',
-                                mode: 'cors'
-                            };
-                            let request = new Request('http://localhost:1337/deleteProdukt', init);
-                            fetch(request)
+                            // let headers = new Headers();
+                            // headers.append('Content-Type', 'application/json');
+                            // let init = {
+                            //     method: 'PUT',
+                            //     headers: headers,
+                            //     body: `{"navn":"${element.navn}","id":"${element.id}"}`,
+                            //     cache: 'no-cache',
+                            //     mode: 'cors'
+                            // };
+                            // let request = new Request('http://localhost:1337/deleteProdukt', init);
+                            // fetch(request)
+                            //     .then(kategoriSearch())
+                            fetch('http://localhost:1337/deleteProdukt', {
+                                'method': 'PUT',
+                                'headers': {
+                                    'Content-Type': 'application/json',
+                                    'Authorization': localStorage.getItem('token'),
+                                    'userID': localStorage.getItem('userid')
+                                },
+                                "body": `{"navn":"${element.navn}","id":"${element.id}"}`,
+                                'mode': 'cors',
+                                'cache': 'default'
+                            })
                                 .then(kategoriSearch())
 
 
                         })
                         document.querySelector(`#buttonPermaSlet${element.id}`).addEventListener("click", () => {
-                            let headers = new Headers();
-                            headers.append('Content-Type', 'application/json');
-                            let init = {
-                                method: 'PUT',
-                                headers: headers,
-                                body: `{"navn":"${element.navn}","id":"${element.id}"}`,
-                                cache: 'no-cache',
-                                mode: 'cors'
-                            };
-                            let request = new Request('http://localhost:1337/deletePermaProdukt', init);
-                            fetch(request)
+                            // let headers = new Headers();
+                            // headers.append('Content-Type', 'application/json');
+                            // let init = {
+                            //     method: 'DELETE',
+                            //     headers: headers,
+                            //     body: `{"navn":"${element.navn}","id":"${element.id}"}`,
+                            //     cache: 'no-cache',
+                            //     mode: 'cors'
+                            // };
+                            // let request = new Request('http://localhost:1337/deletePermaProdukt', init);
+                            // fetch(request)
+                            //     .then(kategoriSearch())
+                            fetch('http://localhost:1337/deletePermaProdukt', {
+                                'method': 'DELETE',
+                                'headers': {
+                                    'Content-Type': 'application/json',
+                                    'Authorization': localStorage.getItem('token'),
+                                    'userID': localStorage.getItem('userid')
+                                },
+                                "body": `{"navn":"${element.navn}","id":"${element.id}"}`,
+                                'mode': 'cors',
+                                'cache': 'default'
+                            })
                                 .then(kategoriSearch())
 
                         })
