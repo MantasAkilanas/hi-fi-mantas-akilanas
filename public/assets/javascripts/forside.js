@@ -1,6 +1,6 @@
 (function(){
     const visNyesteProdukter = function (){
-        fetch("http://localhost:1337/forside")
+        fetch("http://188.226.163.223:1337/forside")
         .then(function(result){
             return result.json();
         })
