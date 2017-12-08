@@ -23,7 +23,7 @@ document.getElementById("save").addEventListener('click', (event) => {
         password.style.backgroundColor = "red";
     }
     if (checker) {
-        let request = new Request('http://localhost:1337/login', init);
+        let request = new Request('http://188.226.163.223:1337/login', init);
         fetch(request)
             .then(function (answer) {
                 return answer.json()

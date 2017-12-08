@@ -10,7 +10,7 @@
 
         // };
         // let request = new Request(, init);
-        fetch('http://localhost:1337/createKategori', {
+        fetch('http://188.226.163.223:1337/createKategori', {
             'method': 'POST',
             'headers': {
                 'Content-Type': 'application/json',
@@ -34,8 +34,8 @@
 
     })
     function kategoriSearch() {
-        fetch(`http://localhost:1337/kategori`)
-            // fetch(`http://localhost:1337/kategori/${document.querySelector("#searchValue2").value}`)
+        fetch(`http://188.226.163.223:1337/kategori`)
+            // fetch(`http://188.226.163.223:1337/kategori/${document.querySelector("#searchValue2").value}`)
             .then((result) => {
                 return result.json();
             })
@@ -89,8 +89,8 @@
                             //     cache: 'no-cache',
                             //     mode: 'cors'
                             // };
-                            // let request = new Request('http://localhost:1337/deleteKategori', init);
-                            fetch('http://localhost:1337/deleteKategori', {
+                            // let request = new Request('http://188.226.163.223:1337/deleteKategori', init);
+                            fetch('http://188.226.163.223:1337/deleteKategori', {
                                 'method': 'PUT',
                                 'headers': {
                                     'Content-Type': 'application/json',
@@ -119,10 +119,10 @@
                             //     cache: 'no-cache',
                             //     mode: 'cors'
                             // };
-                            // let request = new Request('http://localhost:1337/deletePermaKategori', init);
+                            // let request = new Request('http://188.226.163.223:1337/deletePermaKategori', init);
                             // fetch(request)
                             //     .then(kategoriSearch())
-                            fetch('http://localhost:1337/deletePermaKategori', {
+                            fetch('http://188.226.163.223:1337/deletePermaKategori', {
                                 'method': 'DELETE',
                                 'headers': {
                                     'Content-Type': 'application/json',

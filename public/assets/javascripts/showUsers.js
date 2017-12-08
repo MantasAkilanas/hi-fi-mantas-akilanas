@@ -4,7 +4,7 @@
             window.location.assign('login.html');
         } else {
             console.log(localStorage.getItem('token'));
-            fetch('http://localhost:1337/users', {
+            fetch('http://188.226.163.223:1337/users', {
                 'method': 'GET',
                 'headers': {
                     'Authorization': localStorage.getItem('token'),

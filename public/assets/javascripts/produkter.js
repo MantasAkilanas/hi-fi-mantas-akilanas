@@ -11,8 +11,8 @@
         }
     };
     const visAlleKategorier = function () {
-        // fetch("http://localhost:1337/kategorier")
-        fetch("http://localhost:1337/kategori")
+        // fetch("http://188.226.163.223:1337/kategorier")
+        fetch("http://188.226.163.223:1337/kategori")
             .then(function (result) {
                 return result.json();
             })
@@ -51,7 +51,7 @@
             });
     }
     const visEnKategori = function (kategori) {
-        fetch(`http://localhost:1337/produkter/${kategori}`)
+        fetch(`http://188.226.163.223:1337/produkter/${kategori}`)
             .then(function (result) {
                 return result.json();
             })
@@ -78,7 +78,7 @@
                     a.setAttribute("href", "produkter.html?produktnr=" + kat.id);
                     anchor.setAttribute("href", "produkter.html?produktnr=" + kat.id);
                     const navn = document.createTextNode(kat.navn);
-                    img.setAttribute("src", "http://localhost:1337/image/" + kat.billede);
+                    img.setAttribute("src", "http://188.226.163.223:1337/image/" + kat.billede);
                     h3.appendChild(navn);
                     div.setAttribute("class", "col-xs-12 col-sm-6 col-md-3 produktDiv");
                     anchor.appendChild(img);
@@ -95,7 +95,7 @@
 
     }
     const visEnProdukt = function (produkt) {
-        fetch(`http://localhost:1337/produkt/${produkt}`)
+        fetch(`http://188.226.163.223:1337/produkt/${produkt}`)
             .then(function (result) {
                 return result.json();
             })
@@ -110,7 +110,7 @@
                         const img = document.createElement("img");
                         h2.appendChild(h2Text);
                         myDiv.appendChild(h2);
-                        img.setAttribute("src", "http://localhost:1337/image/" + prod.billede);
+                        img.setAttribute("src", "http://188.226.163.223:1337/image/" + prod.billede);
                         div.setAttribute("class", "col-xs-12 col-md-6 produktDiv");
                         div.appendChild(img);
                         myDiv.appendChild(div);
@@ -138,7 +138,7 @@
             });
     }
     const findProdukt = function (find) {
-        fetch(`http://localhost:1337/search/${find}`)
+        fetch(`http://188.226.163.223:1337/search/${find}`)
             .then(function (result) {
                 return result.json();
             })
@@ -163,7 +163,7 @@
                     a.setAttribute("href", "produkter.html?produktnr=" + fund.id);
                     anchor.setAttribute("href", "produkter.html?produktnr=" + fund.id);
                     const navn = document.createTextNode(fund.navn);
-                    img.setAttribute("src", `http://localhost:1337/image/${fund.billede}`);
+                    img.setAttribute("src", `http://188.226.163.223:1337/image/${fund.billede}`);
                     h3.appendChild(navn);
                     div.setAttribute("class", "col-xs-12 col-sm-6 col-md-3 produktDiv");
                     anchor.appendChild(img);

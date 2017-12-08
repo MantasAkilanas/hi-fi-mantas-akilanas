@@ -1,6 +1,6 @@
 (() => {
     addEventListener("DOMContentLoaded", () => {
-        fetch("http://localhost:1337/kategori")
+        fetch("http://188.226.163.223:1337/kategori")
             .then((results) => {
                 return results.json();
             })
@@ -14,7 +14,7 @@
                     kategori.appendChild(option);
                 });
             });
-        fetch("http://localhost:1337/producent")
+        fetch("http://188.226.163.223:1337/producent")
             .then((results) => {
                 return results.json();
             })
@@ -46,7 +46,7 @@
             cache: 'no-cache'
         };
         console.log(data)
-        let request = new Request(`http://localhost:1337/createProdukt`, init);
+        let request = new Request(`http://188.226.163.223:1337/createProdukt`, init);
 
         fetch(request)
         .then((result)=>{
@@ -77,7 +77,7 @@
         //     cache: 'no-cache',
         //     mode: 'cors'
         // };
-        // let request = new Request('http://localhost:1337/createProdukt', init);
+        // let request = new Request('http://188.226.163.223:1337/createProdukt', init);
         // fetch(request)
         //     .then(function () {
         //         kategoriSearch();
@@ -91,8 +91,8 @@
 
     })
     function kategoriSearch() {
-        fetch(`http://localhost:1337/alleprodukter`)
-            // fetch(`http://localhost:1337/kategori/${document.querySelector("#searchValue2").value}`)
+        fetch(`http://188.226.163.223:1337/alleprodukter`)
+            // fetch(`http://188.226.163.223:1337/kategori/${document.querySelector("#searchValue2").value}`)
             .then((result) => {
                 return result.json();
             })
@@ -155,10 +155,10 @@
                             //     cache: 'no-cache',
                             //     mode: 'cors'
                             // };
-                            // let request = new Request('http://localhost:1337/deleteProdukt', init);
+                            // let request = new Request('http://188.226.163.223:1337/deleteProdukt', init);
                             // fetch(request)
                             //     .then(kategoriSearch())
-                            fetch('http://localhost:1337/deleteProdukt', {
+                            fetch('http://188.226.163.223:1337/deleteProdukt', {
                                 'method': 'PUT',
                                 'headers': {
                                     'Content-Type': 'application/json',
@@ -183,10 +183,10 @@
                             //     cache: 'no-cache',
                             //     mode: 'cors'
                             // };
-                            // let request = new Request('http://localhost:1337/deletePermaProdukt', init);
+                            // let request = new Request('http://188.226.163.223:1337/deletePermaProdukt', init);
                             // fetch(request)
                             //     .then(kategoriSearch())
-                            fetch('http://localhost:1337/deletePermaProdukt', {
+                            fetch('http://188.226.163.223:1337/deletePermaProdukt', {
                                 'method': 'DELETE',
                                 'headers': {
                                     'Content-Type': 'application/json',

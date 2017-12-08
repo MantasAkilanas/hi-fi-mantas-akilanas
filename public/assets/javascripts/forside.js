@@ -16,7 +16,7 @@
                 a.setAttribute("href","produkter.html?produktnr="+nyesteProdukt.id);
                 anchor.setAttribute("href","produkter.html?produktnr="+nyesteProdukt.id);
                 const navn = document.createTextNode(nyesteProdukt.navn);
-                img.setAttribute("src","http://localhost:1337/image/"+nyesteProdukt.billede)
+                img.setAttribute("src","http://188.226.163.223:1337/image/"+nyesteProdukt.billede)
                 
                 h3.appendChild(navn);
                 div.setAttribute("class","col-xs-12 col-sm-6 col-md-3 produktDiv")

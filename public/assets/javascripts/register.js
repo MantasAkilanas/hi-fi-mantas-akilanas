@@ -40,7 +40,7 @@ document.getElementById("save").addEventListener('click', (event) => {
         emailR.style.backgroundColor = "red";
     }
     if(checker){
-        let request = new Request('http://localhost:1337/createAccount', init);
+        let request = new Request('http://188.226.163.223:1337/createAccount', init);
         fetch(request)
         .then(function (answer){
             return answer.json()

@@ -44,7 +44,7 @@ document.getElementById("save").addEventListener('click', (event) => {
     }
 
     if (checker) {
-        let request = new Request('http://localhost:1337/createKontakt', init);
+        let request = new Request('http://188.226.163.223:1337/createKontakt', init);
         fetch(request)
             .then(function (result) {
                 return result.json();

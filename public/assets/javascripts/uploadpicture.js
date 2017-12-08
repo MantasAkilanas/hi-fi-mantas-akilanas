@@ -11,7 +11,7 @@ addEventListener("DOMContentLoaded", () => {
            cache: 'no-cache'
         };
   
-        let request = new Request(`http://localhost:1337/image`, init);
+        let request = new Request(`http://188.226.163.223:1337/image`, init);
   
         fetch(request)
 

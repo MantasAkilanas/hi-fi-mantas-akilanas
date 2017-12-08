@@ -13,13 +13,13 @@
         //     cache: 'no-cache',
         //     mode: 'cors'
         // };
-        // let request = new Request('http://localhost:1337/createProducent', init);
+        // let request = new Request('http://188.226.163.223:1337/createProducent', init);
         // fetch(request)
         //     .then(function () {
         //         producentSearch();
 
         //     })
-        fetch('http://localhost:1337/createProducent', {
+        fetch('http://188.226.163.223:1337/createProducent', {
             'method': 'POST',
             'headers': {
                 'Content-Type': 'application/json',
@@ -38,8 +38,8 @@
 
     })
     function producentSearch() {
-        fetch(`http://localhost:1337/producent`)
-            // fetch(`http://localhost:1337/producent/${document.querySelector("#searchValue2").value}`)
+        fetch(`http://188.226.163.223:1337/producent`)
+            // fetch(`http://188.226.163.223:1337/producent/${document.querySelector("#searchValue2").value}`)
             .then((result) => {
                 return result.json();
             })
@@ -93,10 +93,10 @@
                             //     cache: 'no-cache',
                             //     mode: 'cors'
                             // };
-                            // let request = new Request('http://localhost:1337/deleteProducent', init);
+                            // let request = new Request('http://188.226.163.223:1337/deleteProducent', init);
                             // fetch(request)
                             //     .then(producentSearch())
-                                fetch('http://localhost:1337/deleteProducent', {
+                                fetch('http://188.226.163.223:1337/deleteProducent', {
                                     'method': 'PUT',
                                     'headers': {
                                         'Content-Type': 'application/json',
@@ -121,10 +121,10 @@
                             //     cache: 'no-cache',
                             //     mode: 'cors'
                             // };
-                            // let request = new Request('http://localhost:1337/deletePermaProducent', init);
+                            // let request = new Request('http://188.226.163.223:1337/deletePermaProducent', init);
                             // fetch(request)
                             //     .then(producentSearch())
-                            fetch('http://localhost:1337/deletePermaProducent', {
+                            fetch('http://188.226.163.223:1337/deletePermaProducent', {
                                 'method': 'Delete',
                                 'headers': {
                                     'Content-Type': 'application/json',
